@@ -6,7 +6,8 @@ while True:
         print('say something: ')
         audio = r.listen(source)
     try:
-        print('Sphinx thinks you said ' + r.recognize_sphinx(audio))
+        #print('Sphinx thinks you said ' + r.recognize_sphinx(audio))
+        print('google thinks you said ' + r.recognize_google(audio).lower())
     except sr.UnknownValueError:
         print('sphinx could not understand')
     except sr.RequestError as e:
