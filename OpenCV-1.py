@@ -14,6 +14,8 @@ cam = cv2.VideoCapture('/dev/video1')
 
 while True:
     _, frame = cam.read()
+    fps = cam.get(cv2.CAP_PROP_FPS)
+    print(fps)
     cv2.imshow('frame', frame)
     cv2.moveWindow('frame', 0,0)
     if cv2.waitKey(1) == ord('q'):
